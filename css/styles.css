@@ -85,10 +85,8 @@ html, body {
 
 nav {
 	display: flex;
-	position: fixed;
-	top: 5%;
 	align-items: center;
-	width: 980px;
+	width: 920px;
 	height: 36px;
 	background: linear-gradient(to bottom ,rgb(107, 107, 107) 50%, gray 0);
 	border-radius: 5px;
@@ -119,14 +117,28 @@ nav > span:hover {
 
 
 
-input {
+.search {
 	width: 100px;
+	max-height: 26px;
+	margin: 0 auto;
+	background: linear-gradient(to bottom ,rgb(107, 107, 107) 50%, gray 0);
+	border-radius: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	box-shadow: inset 2px 2px 18px 0px rgba(0,0,0,0.2);
+	transition: .7s;
+	color:white;
+}
+
+.search:focus {
+	background: white;
+	margin: 0 10px;
+	width: 15%;
+	color:black;
 }
 
 header {
-	position: fixed;
-	top: 10%;
-	width: 100%;
+	
+	width: auto;
 	height: 335px;
 	display: grid;
 	justify-items: center;
