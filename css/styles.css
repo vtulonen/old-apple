@@ -52,6 +52,8 @@ html, body {
 	font-family: 'Open Sans Condensed', sans-serif;
 }
 
+/* Page container */
+
 .container {
 	display: grid;
 	grid-template-columns: repeat(4, minmax(200px, 364px));
@@ -69,17 +71,21 @@ html, body {
 	height: 100%;
 }
 
+/* Hero img area */
+
 .hero {
-	max-width: 1460px;
 	grid-column: 1/-1;
-	background: url(https://web.archive.org/web/20140301004302im_/http://images.apple.com/v/home/as/images/your_verse_hero.jpg) 50% 100% no-repeat;
-	background-size: 120%;
-	background-position: bottom center;
-	max-height: 1315px;
 	display: grid;
 	grid-template-rows: 100px;
 	justify-items: center;
+	max-width: 1460px;
+	max-height: 1315px;
+	background: url(https://web.archive.org/web/20140301004302im_/http://images.apple.com/v/home/as/images/your_verse_hero.jpg) 50% 100% no-repeat;
+	background-size: 120%;
+	background-position: bottom center;
 }
+
+/* Top nav menu */
 
 nav {
 	display: flex;
@@ -87,18 +93,18 @@ nav {
 	align-self: center;
 	width: 920px;
 	height: 36px;
+	color: whitesmoke;
 	background: linear-gradient(to bottom, rgb(107, 107, 107) 50%, gray 0);
 	border-radius: 5px;
-	color: whitesmoke
 }
 
 nav>span {
-	width: 100px;
-	height: 100%;
-	border-right: 1px solid rgba(104, 103, 103, 1);
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	width: 100px;
+	height: 100%;
+	border-right: 1px solid rgba(104, 103, 103, 1);
 	font-weight: 800;
 }
 
@@ -107,38 +113,42 @@ nav>span:hover {
 	cursor: pointer;
 }
 
-.first:hover {
+nav>.first:hover {
 	border-radius: 5px 0 0 5px;
 }
+
+/* Search inputfield in nav */
 
 .search {
 	width: 100px;
 	max-height: 26px;
 	margin: 0 auto;
 	padding-left: 20px;
+	color: white;
 	background: url(/images/magnifying-glass-3-16.png) 5% no-repeat, linear-gradient(to bottom, rgb(107, 107, 107) 50%, gray 0);
 	background-size: 10px;
 	border-radius: 10px;
 	border: 1px solid rgba(0, 0, 0, 0.3);
 	box-shadow: inset 2px 2px 18px 0px rgba(0, 0, 0, 0.2);
 	transition: .7s;
-	color: white;
 }
 
 .search:focus {
-	background: url(/images/magnifying-glass.png) 5% no-repeat, white;
-	background-size: 10px;
 	padding-left: 20px;
 	margin: 0 10px;
 	width: 15%;
 	color: black;
+	background: url(/images/magnifying-glass.png) 5% no-repeat, white;
+	background-size: 10px;
 }
 
+/* Hero text area */
+
 header {
-	width: auto;
-	height: 335px;
 	display: grid;
 	justify-items: center;
+	width: auto;
+	height: 335px;
 	margin: 50px 0;
 	font-weight: 300;
 	color: rgb(250, 250, 250);
@@ -156,24 +166,13 @@ h2 {
 h3 {
 	font-size: 2.0em;
 	text-align: center;
-	
 }
 
-
-img:hover, h1:hover, h2:hover, h3:hover {
-	cursor: pointer;
+.fa-play-circle-o {
+	opacity: 80%;
 }
 
-a:hover, h3:hover{
-	text-decoration: underline;
-	
-	cursor: pointer;
-	text-decoration-thickness: 1px;
-
-}
-
-
-/* Footer */
+/* Footer - split into left & right side*/
 
 footer {
 	display: grid;
@@ -183,8 +182,6 @@ footer {
 	color: gray
 }
 
-footer>p {}
-
 .left {
 	grid-column: 1 / 3;
 }
@@ -192,6 +189,8 @@ footer>p {}
 .right {
 	grid-column: 3 / 5;
 }
+
+/* Links, hovers etc. */
 
 a {
 	color: #08c
@@ -202,6 +201,12 @@ a {
 	padding: 0 10px;
 }
 
-.fa-play-circle-o {
-	opacity: 80%;
+img:hover, h1:hover, h2:hover, h3:hover {
+	cursor: pointer;
+}
+
+a:hover, h3:hover {
+	text-decoration: underline;
+	cursor: pointer;
+	text-decoration-thickness: 1px;
 }
